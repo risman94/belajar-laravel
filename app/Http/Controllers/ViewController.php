@@ -14,8 +14,9 @@ class ViewController extends Controller
     {
     	
     	$home = Home::all();
+	$kategori = Kategori::all();
     	
-    	return view('welcome',['home' => $home ]);
+    	return view('welcome',['home' => $home , 'kategori' => $kategori]);
     }
 
     public function produk($id)
