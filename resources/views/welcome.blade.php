@@ -2,7 +2,7 @@
 
 @section('isi')
       
-<div class="container col-md-12 col-lg-12 col-sm-12">
+<!--div class="container col-md-12 col-lg-12 col-sm-12">
     <div class="row">
         @foreach($home as $home)
         <div class="col-sm-6 col-md-3">
@@ -17,8 +17,26 @@
         </div>
         @endforeach
     </div>
+</div-->
+
+<div class="container col-md-12 col-lg-12 col-sm-12">
+    <div class="row">
+        <h2><center>Categories</center></h2><br><br>
+        <div class=" col-md-1"></div>
+        @foreach($kategori as $kat)
+        <div class="col-sm-6 col-md-2">
+            <a href="/kategori/{{$kat->id}}" class="thumbnail">
+            <div class="thumbnail">
+                <h3>{{$kat->name_kategori}}</h3>
+                <img src="/fotos/Untitled-2.jpg" alt="...">
+            </div>
+            </a>
+        </div>
+        @endforeach
+        <div class=" col-md-1"></div>
+    </div>
 </div>
- @endsection      
+@endsection      
 
         
         

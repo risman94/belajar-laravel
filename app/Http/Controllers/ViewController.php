@@ -14,14 +14,18 @@ class ViewController extends Controller
     {
     	
     	$home = Home::all();
+        $kategori = Kategori::all();
     	
-    	return view('welcome',['home' => $home ]);
+    	return view('welcome',['home' => $home , 'kategori' => $kategori]);
     }
 
     public function produk($id)
     {
     	$kategori = Kategori::find($id);
+        $home = $kategori->home;
+        
+        return view('produk', ['kategori' => [ $kategori ],'home' => $home,]);
 
-      	return view('produk', ['kategori' => $kategori ]);
+      	//return view('produk', ['kategori' => $kategori ]);
     }
 }

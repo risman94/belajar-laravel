@@ -1,6 +1,6 @@
 <?php $__env->startSection('isi'); ?>
       
-<div class="container col-md-12 col-lg-12 col-sm-12">
+<!--div class="container col-md-12 col-lg-12 col-sm-12">
     <div class="row">
         <?php $__currentLoopData = $home; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $home): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
         <div class="col-sm-6 col-md-3">
@@ -15,8 +15,26 @@
         </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
     </div>
+</div-->
+
+<div class="container col-md-12 col-lg-12 col-sm-12">
+    <div class="row">
+        <h2><center>Categories</center></h2><br><br>
+        <div class=" col-md-1"></div>
+        <?php $__currentLoopData = $kategori; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $kat): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+        <div class="col-sm-6 col-md-2">
+            <a href="/kategori/<?php echo e($kat->id); ?>" class="thumbnail">
+            <div class="thumbnail">
+                <h3><?php echo e($kat->name_kategori); ?></h3>
+                <img src="/fotos/Untitled-2.jpg" alt="...">
+            </div>
+            </a>
+        </div>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
+        <div class=" col-md-1"></div>
+    </div>
 </div>
- <?php $__env->stopSection(); ?>      
+<?php $__env->stopSection(); ?>      
 
         
         

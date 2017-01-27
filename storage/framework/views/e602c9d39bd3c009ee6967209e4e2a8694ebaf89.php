@@ -1,9 +1,8 @@
 <?php $__env->startSection('isi'); ?>
-
 <div class="container col-md-12 col-lg-12 col-sm-12">
-	
+<p><a href="/" class="btn btn-warning" role="button"> Back to home</a></p>
     <div class="row">
-        <?php $__currentLoopData = $kategori->home; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $home): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+        <?php $__currentLoopData = $home; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $home): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
         <div class="col-sm-6 col-md-3">
             <div class="thumbnail">
                 <img src="/fotos/<?php echo e($home->foto); ?>" alt="...">

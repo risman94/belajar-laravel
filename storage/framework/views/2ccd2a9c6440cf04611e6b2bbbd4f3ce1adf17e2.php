@@ -44,9 +44,9 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Produk <span class="caret"></span></a>
                             
                             <ul class="dropdown-menu">
-                                <?php $__currentLoopData = $home->kategori; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $kategori): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+                                <?php $__currentLoopData = $kategori; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $kat): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
                                 <li>
-                                    <a href="/kategori/<?php echo e($kategori->id); ?>"><?php echo e($kategori->name_kategori); ?></a>
+                                    <a href="/kategori/<?php echo e($kat->id); ?>"><?php echo e($kat->name_kategori); ?></a>
                                 </li>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
                             </ul>

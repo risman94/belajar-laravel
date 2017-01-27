@@ -1,11 +1,10 @@
 @extends('layouts.master')
 
 @section('isi')
-
 <div class="container col-md-12 col-lg-12 col-sm-12">
-	
+<p><a href="/" class="btn btn-warning" role="button"> Back to home</a></p>
     <div class="row">
-        @foreach($kategori->home as $home)
+        @foreach($home as $home)
         <div class="col-sm-6 col-md-3">
             <div class="thumbnail">
                 <img src="/fotos/{{ $home->foto }}" alt="...">
