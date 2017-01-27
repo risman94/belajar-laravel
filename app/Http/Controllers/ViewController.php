@@ -14,11 +14,7 @@ class ViewController extends Controller
     {
     	
     	$home = Home::all();
-<<<<<<< HEAD
         $kategori = Kategori::all();
-=======
-	$kategori = Kategori::all();
->>>>>>> 3347637d9a6288dd8524a9a0a7f17ec97b04549d
     	
     	return view('welcome',['home' => $home , 'kategori' => $kategori]);
     }

@@ -17,6 +17,9 @@
                             <option></option>
                             <option value="1">fashion</option>
                             <option value="2">elektronik</option>
+                            <option value="3">olahraga</option>
+                            <option value="4">musik</option>
+                            <option value="5">properti</option>
                         </select><br>
 
                         <input type="submit" name="submit" value="edit"><br>

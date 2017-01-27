@@ -44,11 +44,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Produk <span class="caret"></span></a>
                             
                             <ul class="dropdown-menu">
-<<<<<<< HEAD
                                 @foreach($kategori as $kat)
-=======
-                                @foreach($kategori as $kategori)
->>>>>>> 3347637d9a6288dd8524a9a0a7f17ec97b04549d
                                 <li>
                                     <a href="/kategori/{{$kat->id}}">{{$kat->name_kategori}}</a>
                                 </li>
