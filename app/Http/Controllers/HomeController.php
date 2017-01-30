@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Home;
 use App\Kategori;
+use App\Pemesanans;
+use App\Contact;
 
 
 class HomeController extends Controller
@@ -32,7 +34,39 @@ class HomeController extends Controller
       //return view('home',['homes' => $homes]);
       $kategori = Kategori::all();
 
-      return view('home', ['kategori' => $kategori]);
+      //$pemesanan = Pemesanans::all();
+
+      return view('home', ['kategori' => $kategori ]);
+    }
+
+    public function pemesananindex()
+    {
+
+      $pemesanan = Pemesanans::all();
+
+      return view('datapesan', ['pemesanan' => $pemesanan]);
+    }
+
+    public function contactindex()
+    {
+
+      $contact = Contact::all();
+
+      return view('datacontact', ['contact' => $contact]);
+    }
+
+    public function pemesananshow($id) 
+    {
+      $pemesanan = Pemesanans::find($id);
+
+      return view('dataidpesan', ['pemesanan' => $pemesanan ]);
+    }
+
+    public function contactshow($id) 
+    {
+      $contact = Contact::find($id);
+
+      return view('dataidcontact', ['contact' => $contact ]);
     }
 
     public function show1($id)
@@ -62,8 +96,6 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-      
-      
 
       $home = new Home;
       $file = $request->file('foto');
@@ -76,8 +108,6 @@ class HomeController extends Controller
       $home->name_kategori = $request->name_kategori;
       $home->save();
 
-
-       
       return redirect('home'); 
     }
 
@@ -111,5 +141,21 @@ class HomeController extends Controller
       $home->delete();
 
       return redirect('home');
+    }
+
+    public function pemesanandestroy($id)
+    {
+      $pemesanan = Pemesanans::find($id);
+      $pemesanan->delete();
+
+      return redirect('home/pemesanan');
+    }
+
+    public function contactdestroy($id)
+    {
+      $contact = Contact::find($id);
+      $contact->delete();
+
+      return redirect('home/contact');
     }
 }

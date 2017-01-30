@@ -8,12 +8,20 @@
                 <div class="panel-body">
                     <p>You are logged in!</p>
                     <hr>
-                    
-                    <?php $__currentLoopData = $kategori; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $kategori): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
-                        <li>
-                            <a href="/home/<?php echo e($kategori->id); ?>"><?php echo e($kategori->name_kategori); ?></a>
-                        </li>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
+                    <div class="container">
+                        <div class="row">
+                            <li><a href="home/pemesanan">Pemesanan</a></li>
+                            <li><a href="home/contact">Contact</a></li>
+                        </div>
+                        <div class="row">
+                            <h3>create produk</h3>
+                            <?php $__currentLoopData = $kategori; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $kategori): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+                                <li>
+                                    <a href="/home/<?php echo e($kategori->id); ?>"><?php echo e($kategori->name_kategori); ?></a>
+                                </li>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
+                        </div>
+                    </div>
                     <a class="btn btn-default" href="/home/create" role="button">create</a>
                 </div>
             </div>

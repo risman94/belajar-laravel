@@ -12,6 +12,7 @@
         
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
         <link href="/css/app.css" rel="stylesheet">
         <link href="/css/index.css" rel="stylesheet">
@@ -39,27 +40,14 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Produk <span class="caret"></span></a>
-                            
-                            <ul class="dropdown-menu">
-                                @foreach($kategori as $kat)
-                                <li>
-                                    <a href="/kategori/{{$kat->id}}">{{$kat->name_kategori}}</a>
-                                </li>
-                                @endforeach
-                            </ul>
-                            
+                        <li>
+                            <a href="/pemesanan">Pemesanan</a>
                         </li>
                         <li>
-                            <a href="#">Pemesanan</a>
+                            <a href="/about">About</a>
                         </li>
                         <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
+                            <a href="/contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -73,7 +61,6 @@
                 <div class="header-content-inner">
                     <h1 id="homeHeading">Arino Shop</h1>
                     <h3>Happy Shopping Center</h3>
-                    <hr>
                 </div>
             </div>
         </header>
@@ -84,11 +71,25 @@
 
         <!-- Footer -->
         <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+            <!--div class="container col-md-12 col-lg-12 col-sm-12"-->
+                <div class="row r-sdbar-contact">
+                    <div class="col-md-6 text-center">
+                        <i class="fa fa-phone fa-3x sr-contact"></i>
+                        <p>081803628720</p>
+                        <p>085239114901</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                        <p>JL. Majapahit no.3 Mataram, Lombok - NTB</p>
+                        <p>kamarulrisman1994@gmail.com</p>
+                    </div>
                 </div>
-            </div>
+                <div class="row r-f">
+                    <div class="col-md-12">
+                        <p>Copyright &copy; Arinoshop 2017</p>
+                    </div>
+                </div>
+            <!--/div-->
         </footer>
 
 

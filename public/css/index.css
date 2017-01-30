@@ -1,20 +1,124 @@
-*{
+* {
   margin-right:0 !important; 
   
 }
 
 body { 
-  padding-top: 70px; 
+   
+  background :white;
 }
 
+/*halaman master dan welcome*/
 #bs-example-navbar-collapse-1 {
   padding-right: 150px;
 }
 
-.header-content-inner {
-  text-align: center;
+#homeHeading{
+	font-size: 72px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-style: italic;
 }
 
-.row {
-  float: left;
+.header-content-inner {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  background: #F0F8FF;
+}
+
+.t-kategori {
+	border :none;
+	text-align: center;
+	background-color: white;
+	color: gray;
+}
+
+.c-wlcm {
+	background-color: #F0F8FF;
+	padding-top: 70px;
+	padding-bottom: 120px;
+}
+
+.r-sdbar-contact {
+	background: #F0F8FF;
+	
+	padding-bottom: 40px;
+}
+
+.text-center {
+	padding-top: 30px;
+}
+
+.r-f {
+	background-color: #222;
+	text-align: center;
+	padding-top: 10px;
+}
+
+/*halaman produk*/
+.c-produk {
+	background-color: white;
+	padding-bottom: 70px;
+	padding-top: 40px;
+}
+
+.back {
+	padding-top: 30px;
+	text-align: center;
+}
+
+.img-produk{
+	width: 345px;
+	height: 180px !important;
+}
+
+/*halaman idproduk*/
+.c-idproduk {
+	padding-bottom: 70px;
+	padding-top: 100px;
+	background-color: white;
+}
+
+.img-idproduk {
+	float: left;
+    width: 600px;
+    height: 307px;
+    padding-right: 30px;
+}
+
+/*halaman pesan*/
+.c-pesan {
+	background-color: white;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+/*halaman contact*/
+.c-contact {
+	background-color: white;
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
+
+.judul-contact {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+/*halaman about*/
+.c-about {
+	background-color: white;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
+
+.judul-about {
+	padding-bottom: 30px;
+}
+
+/*halaman single*/
+.img-single {
+	width: 700px;
+	height: 400px;
 }

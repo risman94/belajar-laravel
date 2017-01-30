@@ -8,7 +8,7 @@
                 <div class="panel-body">
                     <p>halaman single !</p>
                     <hr>
-                    <img src="/fotos/<?php echo e($home->foto); ?>"><hr>
+                    <img src="/fotos/<?php echo e($home->foto); ?>" class="img-single"><hr>
                     <h3> Title : <?php echo e($home->title); ?> </h3><hr>
                     <h3> Description : <?php echo e($home->description); ?> </h3><hr>
                     <h3> Price : <?php echo e($home->price); ?> </h3><hr>

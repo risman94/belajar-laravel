@@ -14,16 +14,29 @@
 //view
 Route::get('/', 'ViewController@index');
 Route::get('/kategori/{id}', 'ViewController@produk');
+Route::get('/kategori/produk/{id}', 'ViewController@produkid');
+//pemesanan
+Route::get('/pemesanan', 'ViewController@pemesanancreate');
+Route::post('/pemesanan', 'ViewController@pemesananstore');
+//about
+Route::get('/about', 'ViewController@about');
+//contact
+Route::get('/contact', 'ViewController@contactcreate');
+Route::post('/', 'ViewController@contactstore');
 
 //auth
 Auth::routes();
 
 //dashboard
 Route::get('/home', 'HomeController@index');
+Route::get('/home/pemesanan', 'HomeController@pemesananindex');
+Route::get('/home/contact', 'HomeController@contactindex');
 
 Route::get('/home/create', 'HomeController@create');
 Route::post('/home', 'HomeController@store');
 
+Route::get('/home/contact/{id}', 'HomeController@contactshow');
+Route::get('/home/pemesanan/{id}', 'HomeController@pemesananshow');
 Route::get('/home/{id}', 'HomeController@show1');
 Route::get('/home/produk/{id}', 'HomeController@show');
 
@@ -31,6 +44,8 @@ Route::get('/home/{id}/edit', 'HomeController@edit');
 Route::put('/home/produk/{id}', 'HomeController@update');
 
 Route::delete('/home/{id}', 'HomeController@destroy');
+Route::delete('/home/pemesanan/{id}', 'HomeController@pemesanandestroy');
+Route::delete('/home/contact/{id}', 'HomeController@contactdestroy');
 
 
 //Route::get('kategori/{id}', function($id){

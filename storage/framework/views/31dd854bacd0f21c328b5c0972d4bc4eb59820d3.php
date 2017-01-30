@@ -18,16 +18,13 @@
 </div-->
 
 <div class="container col-md-12 col-lg-12 col-sm-12">
-    <div class="row">
+    <div class="row c-wlcm">
         <h2><center>Categories</center></h2><br><br>
         <div class=" col-md-1"></div>
         <?php $__currentLoopData = $kategori; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $kat): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
         <div class="col-sm-6 col-md-2">
-            <a href="/kategori/<?php echo e($kat->id); ?>" class="thumbnail">
-            <div class="thumbnail">
-                <h3><?php echo e($kat->name_kategori); ?></h3>
-                <img src="/fotos/Untitled-2.jpg" alt="...">
-            </div>
+            <a href="/kategori/<?php echo e($kat->id); ?>" class="thumbnail t-kategori">
+                <h4><?php echo e($kat->name_kategori); ?></h4>
             </a>
         </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>

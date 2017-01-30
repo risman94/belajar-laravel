@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     <p>halaman single !</p>
                     <hr>
-                    <img src="/fotos/{{ $home->foto }}"><hr>
+                    <img src="/fotos/{{ $home->foto }}" class="img-single"><hr>
                     <h3> Title : {{$home->title}} </h3><hr>
                     <h3> Description : {{ $home->description }} </h3><hr>
                     <h3> Price : {{$home->price}} </h3><hr>
